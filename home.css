@@ -134,7 +134,35 @@ body {
 
 /* navbar style end */
 
-/* card  */
+/* video carousel  */
+/* Container for each video */
+.video-container {
+  width: 32%; /* Each video takes 32% of the row for 3 per row */
+  aspect-ratio: 16/9; /* Maintain 16:9 ratio */
+  overflow: hidden;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+/* Make iframe fill the container */
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/* Carousel inner spacing */
+.carousel-inner {
+  padding: 0 15px; /* Add padding for better alignment */
+}
+
+/* Carousel control buttons */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5); /* Optional styling for visibility */
+  border-radius: 50%;
+}
+
+/* video carousel end */
 
 @media (min-width: 992px) {
   .lg-only-border-right {
@@ -148,5 +176,18 @@ body {
 
   .lg-only-border-right-red {
     border-right: 2px solid #ea2224;
+  }
+}
+
+@media (max-width: 768px) {
+  .video-container {
+    width: 48%; /* 2 per row for smaller screens */
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .video-container {
+    width: 100%; /* 1 per row for extra small screens */
   }
 }

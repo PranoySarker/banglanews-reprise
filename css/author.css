@@ -1,0 +1,157 @@
+/* fonts */
+.lato-regular {
+  font-family: "Lato", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lato-bold {
+  font-family: "Lato", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "athelas";
+  src: url("../assets/font/athelas-regular-webfont.eot");
+  src: url("../assets/font/athelas-regular-webfont.ttf") format("truetype"),
+    url("../assets/font/athelas-regular-webfont.woff2") format("woff2"),
+    url("../assets/font/athelas-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.athelas-regular {
+  font-family: "athelas", sans-serif;
+}
+
+/* Navbar style */
+/* Navbar general styles */
+.navbar-nav .nav-link {
+  color: white !important;
+  position: relative;
+  text-decoration: none;
+  padding: 5px 15px;
+}
+
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+  width: 100%;
+}
+
+/* Dropdown-specific styles */
+.navbar-nav .dropdown-container {
+  position: relative;
+}
+
+.navbar-nav .dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ea2224;
+  padding: 5px 0;
+  list-style: none;
+  width: max-content;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  white-space: nowrap;
+}
+
+.navbar-nav .dropdown li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.navbar-nav .dropdown li a {
+  text-decoration: none;
+  color: white;
+  font-size: 0.9rem;
+  padding: 5px 10px;
+  display: inline-block;
+}
+
+.navbar-nav .dropdown li a:hover {
+  color: black;
+  background-color: white;
+  border-radius: 3px;
+}
+
+/* Show dropdown on hover */
+.navbar-nav .dropdown-container:hover .dropdown {
+  display: block;
+}
+/* navbar style end */
+
+.author-body {
+  background-color: black;
+}
+
+/* Name card css */
+.card {
+  border-radius: 0px !important; /* Optional: Round corners */
+}
+
+.card-title {
+  line-height: 1;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card .d-flex p {
+  font-size: 1rem;
+}
+
+.card .d-flex h1 {
+  font-size: 3rem;
+}
+/* Name card css end */
+
+/* Photo card css */
+.photo-card {
+  position: relative;
+  width: 300px; /* Adjust as needed */
+  height: 300px; /* Adjust as needed */
+  overflow: hidden;
+}
+
+.photo-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.grid-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* Creates vertical lines */
+  grid-template-rows: 1fr 1fr 1fr; /* Creates horizontal lines */
+  gap: 0;
+}
+
+.grid-lines div {
+  border: 1px solid white; /* White grid lines */
+  box-sizing: border-box;
+}
+/* Photo card css end*/
+
+.text-style-justify {
+  text-align: justify;
+}

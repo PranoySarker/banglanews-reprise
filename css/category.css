@@ -105,6 +105,10 @@
 }
 /* navbar style end */
 
+.fs-7 {
+  font-size: 10px;
+}
+
 .custom-badge {
   background-color: #709aff;
   color: white;
